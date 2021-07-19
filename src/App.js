@@ -6,7 +6,7 @@ class App extends Component {
     super(props)
     this.state = {
       // ACTION ITEM: Add possible Magic8 Ball answers to the array
-      answerArray: ["Here is an answer"],
+      answerArray: ["Here is an answer", "Yes", "No", "Sometimes", "Not Likely"],
       selectedAnswer: ""
     }
   }
@@ -15,7 +15,8 @@ class App extends Component {
     const { answerArray } = this.state
     // ACTION ITEM: Your code here!!
     // ACTION ITEM: Update the answerArray selection
-    this.setState({ selectedAnswer: answerArray[0] })
+    var item = answerArray[Math.floor(Math.random()*answerArray.length)];
+    this.setState({ selectedAnswer: item })
   }
 
   render(){
@@ -31,6 +32,11 @@ class App extends Component {
           Ask the Magic 8 Ball a Question
         </button>
         <p>{ this.state.selectedAnswer }</p>
+        <div id="circle">
+          <div id="innercircle">
+            <div id="eight">8</div>
+          </div>
+        </div>
       </>
     )
   }
