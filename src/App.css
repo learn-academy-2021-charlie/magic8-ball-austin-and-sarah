@@ -3,6 +3,7 @@ body {
   text-align: center;
   font-family: "Anton", sans-serif;
   height: 90vh;
+  background-color: rgba(1, 152, 117, 1);
 }
 
 h1 {
@@ -13,4 +14,14 @@ h1 {
 .inputBox {
   padding: 5px;
   margin: 10px;
+  border-radius: 10px;
+}
+ 
+p {
+  font-size: 30px;
+  color: red;
+}
+
+button {
+  border-radius: 10px;
 }
