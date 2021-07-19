@@ -6,7 +6,7 @@ class App extends Component {
     super(props)
     this.state = {
       // ACTION ITEM: Add possible Magic8 Ball answers to the array
-      answerArray: ["Here is an answer", "Yes", "No", "Sometimes", "Not Likely"],
+      answerArray: ["Think Bigger!", "My sources say yes", "No", "Sometimes", "Not Likely"],
       selectedAnswer: ""
     }
   }
