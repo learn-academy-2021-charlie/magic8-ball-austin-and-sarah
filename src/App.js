@@ -9,8 +9,12 @@ class App extends Component {
       answerArray: ["It is certain.", "It is decidedly so.", 'Without a doubt.', 'Ask again later.', 'Cannot predict now.', 'Do not count on it.', 'Very Doubtful.'],
       selectedAnswer: ""
     }
+    this.baseState = this.state
   }
-
+  clearInput = () => {
+    //document.getElementById('inputBox').reset();
+    
+  }
   handleSubmit = () => {
     const { answerArray } = this.state
     // ACTION ITEM: Your code here!!
@@ -18,10 +22,18 @@ class App extends Component {
     function getRandomInt(max) {
       return Math.floor(Math.random() * max);
     }
-    const randomNumber = getRandomInt(8)
-    this.setState({ selectedAnswer: answerArray[randomNumber] })
-    var  test = document.getElementById('inputBox');
-    test.reset();
+    const randomNumber = getRandomInt(7)
+    this.setState({ selectedAnswer: answerArray[randomNumber]})
+
+    const newDiv = document.createElement("div");
+    // and give it some content
+    const newContent = document.createTextNode(answerArray[randomNumber]);
+    // add the text node to the newly created div
+    newDiv.appendChild(newContent);
+    // add the newly created element and its content into the DOM
+    const currentDiv = document.getElementById("div1");
+    document.body.insertBefore(newDiv, currentDiv);
+
   }
 
   render(){
@@ -37,6 +49,7 @@ class App extends Component {
           Ask the Magic 8 Ball a Question
         </button>
         <p>{ this.state.selectedAnswer }</p>
+        <p>Previous Answers: </p>
       </>
     )
   }
