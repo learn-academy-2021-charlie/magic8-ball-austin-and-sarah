@@ -3,11 +3,13 @@ body {
   text-align: center;
   font-family: "Anton", sans-serif;
   height: 90vh;
+  background-image: url("https://cdn.hswstatic.com/gif/Rocky-Mountain-oysters.jpg");
 }
 
 h1 {
   text-decoration: underline;
-  font-size: 40px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 100px;
 }
 
 .inputBox {
